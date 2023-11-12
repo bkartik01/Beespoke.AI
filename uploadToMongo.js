@@ -4,8 +4,8 @@ const MongoClient = require('mongodb').MongoClient;
 
 // MongoDB connection string
 const mongoURI = 'uri';
-const dbName = 'test'; // Replace with your actual database name
-const collectionName = 'catalog'; // Replace with your actual collection name
+const dbName = 'test'; //  database name
+const collectionName = 'catalog'; // collection name
 
 // Path to your Excel file
 
