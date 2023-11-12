@@ -3,7 +3,7 @@ const xlsx = require('xlsx');
 const MongoClient = require('mongodb').MongoClient;
 
 // MongoDB connection string
-const mongoURI = 'mongodb+srv://kb2020:KartikJenny2020@cluster0.b0zb0ve.mongodb.net/?retryWrites=true&w=majority';
+const mongoURI = 'uri';
 const dbName = 'test'; // Replace with your actual database name
 const collectionName = 'catalog'; // Replace with your actual collection name
 
