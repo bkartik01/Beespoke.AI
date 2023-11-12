@@ -1,0 +1,61 @@
+<!-- views/searchResults.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Results</title>
+  <!-- Add Bootstrap CSS link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="mb-auto">
+            <div>
+                <h3 class="float-md-left mb-0">Beespoke.AI</h3>
+                <nav class="nav nav-masthead justify-content-center float-md-right">    
+                    <a class="nav-link" href="/main">Back to Search</a>           
+                    <a class="nav-link" href="/logout">Logout</a>           
+                </nav>
+            </div>
+        </header>
+  <div class="container mt-5">
+    <h2 class="text-center">Search Results</h2>
+
+
+    <div class="table-responsive w-100">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Product ID</th>
+            <th scope="col">Product Category</th>
+            <th scope="col">Rank</th>
+            <th scope="col">Brand Name</th>
+            <th scope="col">Product Description</th>
+            <th scope="col">Price</th>
+            <th scope="col">Image Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% results.forEach(product => { %>
+            <tr>
+                <th scope="row"><%= product.product_id %></th>
+                <td><%= product.Product_category %></td>
+                <td><%= product.Rank %></td>
+                <td><%= product.brand_name %></td>
+                <td><%= product.product_description %></td>
+                <td><%= product.price %></td>
+                <td><%= product.image_link %></td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Add Bootstrap JS and Popper.js scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
